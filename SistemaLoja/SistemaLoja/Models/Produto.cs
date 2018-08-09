@@ -22,7 +22,7 @@ namespace SistemaLoja.Models
 
         [Display(Name = "Última Compra")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
-        [DataType(DataType.Date)]
+        //[DataType(DataType.Date)]
         public DateTime UltimaCompra { get; set; }
 
         [Display(Name = "Estoque")]

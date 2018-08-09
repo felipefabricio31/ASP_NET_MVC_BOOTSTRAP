@@ -7,10 +7,13 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/Content/Site.css" />
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
+        <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
@@ -40,11 +43,9 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Operações<b class="caret"></b></a>
                         <ul class="dropdown-menu">
                             <li>@Html.ActionLink("Nova Ordem", "NovaOrdem", "Ordens")</li>
-                           
                         </ul>
                     </li>
 
-                   
                     <li>@Html.ActionLink("Sobre", "About", "Home")</li>
                     <li>@Html.ActionLink("Contatos", "Contact", "Home")</li>
                 </ul>
@@ -52,11 +53,30 @@
             </div>
         </div>
     </div>
-    <div class="container body-content">
+    <div class=" body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Sistema de Felipe Souza</p>
+            <div class="footer-social">
+                <div class="container text-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item social-github">
+                            <a href="https://github.com/felipefabricio31"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li class="list-inline-item social-twitter">
+                            <a href="https://twitter.com/felipefms31?lang=pt"><i class="fa fa-twitter"></i></a>
+                        </li>
+                        <li class="list-inline-item social-facebook">
+                            <a href="https://www.facebook.com/StartBootstrap/"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li class="list-inline-item social-google-plus">
+                            <a href="https://plus.google.com/+Startbootstrap"><i class="fa fa-google-plus"></i></a>
+                        </li>
+                    </ul>
+                </div>
+                <br /> <p align="center">&copy; @DateTime.Now.Year - Sistema ASP NET de Felipe Souza</p>
+            </div>
+
         </footer>
     </div>
 

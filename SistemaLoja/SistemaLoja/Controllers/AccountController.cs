@@ -86,7 +86,7 @@ namespace SistemaLoja.Controllers
                     return RedirectToAction("SendCode", new { ReturnUrl = returnUrl, RememberMe = model.RememberMe });
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Invalid login attempt.");
+                    ModelState.AddModelError("", "Tentativa de login inválida.");
                     return View(model);
             }
         }
@@ -129,7 +129,7 @@ namespace SistemaLoja.Controllers
                     return View("Lockout");
                 case SignInStatus.Failure:
                 default:
-                    ModelState.AddModelError("", "Invalid code.");
+                    ModelState.AddModelError("", "Código inválido.");
                     return View(model);
             }
         }
@@ -215,7 +215,7 @@ namespace SistemaLoja.Controllers
                 // Send an email with this link
                 string code = await UserManager.GeneratePasswordResetTokenAsync(user.Id);
                 var callbackUrl = Url.Action("ResetPassword", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-                await UserManager.SendEmailAsync(user.Id, "Reset Password", "Please reset your password by clicking <a href=\"" + callbackUrl + "\">here</a>");
+                await UserManager.SendEmailAsync(user.Id, "Alterar Senha", "Altere sua senha clicando <a href=\"" + callbackUrl + "\">Aqui</a>");
                 return RedirectToAction("ForgotPasswordConfirmation", "Account");
             }
 

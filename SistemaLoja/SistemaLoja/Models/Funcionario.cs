@@ -32,7 +32,7 @@ namespace SistemaLoja.Models
 
         [Display(Name = "Data de Nascimento")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
-        [DataType(DataType.Date)]
+        //[DataType(DataType.Date)]
         public DateTime Nascimento { get; set; }
 
         [Display(Name = "Data de Cadastro")]

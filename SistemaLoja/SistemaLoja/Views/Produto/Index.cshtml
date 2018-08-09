@@ -7,7 +7,7 @@
 <h2>Lista de Produtos</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Novo Produto", "Create", null, new { @class = "btn btn-success" })
 </p>
 <table class="table">
     <tr>
@@ -47,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.Comentario)
         </td>
         <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.ProdutoId }) |
-            @Html.ActionLink("Detalhes", "Details", new { id=item.ProdutoId }) |
-            @Html.ActionLink("Excluir", "Delete", new { id=item.ProdutoId })
+            @Html.ActionLink("Editar", "Edit", new { id=item.ProdutoId }, new { @class = "btn btn-warning" }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.ProdutoId }, new { @class = "btn btn-info" }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.ProdutoId }, new { @class = "btn btn-danger" })
         </td>
     </tr>
 }
